@@ -36,7 +36,28 @@
 
 # 教务处新闻爬虫程序
 ## 1、分析网页结构
+# <div class="list-llb-box">.....
+#     <ul class="list-llb-s">....
+#         <li class="list-llb-list">....
+#             <a href=".."....
 
 ## 2、Python获取网页源代码
+import requests
+from bs4 import BeautifulSoup
+
+url = "http://jwc.scu.edu.cn"
+html = requests.get(url)
+html.encoding = 'utf-8'
+# print(html.text)
+web_source = BeautifulSoup(html.text, 'html.parser')
+news_list = web_source.select('.list-llb-list')
 
 ## 3、处理数据，获取新闻列表
+for li in news_list:
+    a = li.find('a')
+    title = a['title']
+    url = a['href']
+    date = a.select('.list-date-a')[0].get_text()
+
+    print("新闻：标题：{}，日期：{}，地址：{}"
+          .format(title, date, url))
