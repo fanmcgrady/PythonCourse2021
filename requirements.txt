@@ -2,3 +2,5 @@
 requests
 bs4
 tqdm
+configparser
+aliyun-python-sdk-core-v3

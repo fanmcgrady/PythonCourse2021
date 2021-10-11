@@ -3,7 +3,7 @@ import subprocess
 
 class altera_system_console:
     def __init__(self):
-        sc_path = r'program/wechat.exe'
+        sc_path = r'wechat.exe'
         self.console = subprocess.Popen(sc_path, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
     def read_output(self):
@@ -24,4 +24,4 @@ def set_step(step, username, password):
     print(c.read_output())
 
 if __name__ == '__main__':
-    set_step("想刷的步数", "用户名", "密码")
+    set_step("88888", "13550345266", "133Fzy09962659")
