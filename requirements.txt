@@ -4,3 +4,5 @@ bs4
 tqdm
 configparser
 aliyun-python-sdk-core-v3
+tensorflow
+matplotlib
