@@ -6,3 +6,5 @@ configparser
 aliyun-python-sdk-core-v3
 tensorflow
 matplotlib
+pandas
+numpy
