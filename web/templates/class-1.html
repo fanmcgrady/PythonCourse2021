@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            font-size: 40px;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+<button onclick="getData()">点击请求后台数据</button>
+    请求结果是：
+<span id="result-span">
+
+</span>
+<!-- jquery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    function getData() {
+        $.ajax({
+            url: "http://localhost:5000/args/scu",
+            success: function (res) {
+                $("#result-span").html(res.studentId)
+            }
+        })
+    }
+</script>
+</body>
+</html>

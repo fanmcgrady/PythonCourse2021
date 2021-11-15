@@ -111,8 +111,9 @@ def send_wechat(message):
 
 
 if __name__ == '__main__':
-    newslist = get_news_list()
+    # newslist = get_news_list()
     # send_email(str(newslist[0]), "43471492@qq.com")
     # send_wechat(str(newslist[0]))
-    url, title, date = newslist[0]
-    send_msg(title[:5], url[:5])
+    # url, title, date = newslist[0]
+    # send_msg(title[:5], url[:5])
+    send_email("hello", "43471492@qq.com")
